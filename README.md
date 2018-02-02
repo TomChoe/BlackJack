@@ -18,8 +18,11 @@ I will also use animation to bring the cards to the table from the deck.
 
 ## Phases of Completion
 Friday 2/2 = pseudocode, whiteboarding, initial framing of the board
+
 Sat,Sun = write the backend code
+
 Monday = animations and design
+
 Tuesday = Refactoring the code
 
 ## Links and Resources
