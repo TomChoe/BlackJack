@@ -1,0 +1,69 @@
+body {
+	text-align: center;
+	background: url(./images/background.jpg);
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+	margin: auto;
+	padding: 0;
+}
+
+#dealer, #play1 {
+	color: white;
+	font-size: 24px;
+}
+
+#welcome {
+	background-color: #00ffff;
+	color: red;
+	width: 20%;
+	margin: auto;
+	position: relative;
+	top: 100px;
+}
+
+h1 {
+	font-size: 50px;
+}
+
+h5 {
+	font-size: 18px;
+	position: relative;
+	top: 150px;
+	color: white;
+}
+
+button {
+	font-size: 24px;
+	background: teal;
+	border: 4px solid orange;
+	position: relative;
+	top: 200px;
+}
+
+button:hover {
+	background-color: red;
+}
+
+#hit, #stand{
+	margin: auto;
+	color: white;
+	position: relative;
+
+}
+
+.deck {
+	background: url(./images/card.jpg);
+	background-repeat:no-repeat;
+    background-size:contain;
+	margin: auto;
+	position: relative;
+	left: 1200px;
+	padding: 80px;
+}
+
+.wager {
+	color: white;
+}
+input {
+	width: 50px;
+}

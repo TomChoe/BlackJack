@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="./style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+
+										<!-- game board -->
+
+	<section class = "players">
+		
+		<div id = "dealer">	
+			<h3>Dealer</h3>
+			<span class = "card">
+				<p>hand</p>
+			</span>			
+		</div>
+	
+		<div id = "play1">
+			<h3>Player</h3>
+			<span class = "card">
+				<p>hand</p>
+			</span>
+		</div>
+
+	</section>
+
+		<div class = "deck">
+			<button id="deal">DEAL</button>	
+		</div>
+
+		<div id = "bank">
+		</div>
+
+		<div class = "wager">
+			<form id="form">
+  				<input id="number" type="number" min="1" max="100" name="number">
+  				<button id = "betbutton">BET</button>
+			</form>
+		</div>
+
+
+			<button id = "hit">HIT</button>
+			<button id = "stand">STAND</button>
+			
+			<!--
+ 			<input type="number" name="quantity" min="1" max="99">
+  			<input type="submit" value = "BET"> -->
+
+	<script src="./script.js"></script>
+</body>
+</html>
