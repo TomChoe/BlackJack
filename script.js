@@ -40,15 +40,15 @@ function createDeck() {
 		}
 	}	
 
-	for (let s = 0; s < suit.length; s++) {
+	for (let t = 0; t < suit.length; t++) {
 		for (let f = 0; f < face.length; f++) {
-			deck.push(new faceCard(face[f], suit[s], 10, imgFace+face[f]+suit[s]+'.jpg'));
+			deck.push(new faceCard(face[f], suit[t], 10, imgFace+face[f]+suit[t]+'.jpg'));
 		}
 	}
 
-	for (let i = 0; i < deck.length; i++) {
-		if (deck[i].face === 'A') {
-			deck[i].value = 11;
+	for (let r = 0; r < deck.length; r++) {
+		if (deck[r].face === 'A') {
+			deck[r].value = 11;
 		}
 	}
 
@@ -86,7 +86,7 @@ function deal() {
 		bank = bank + bet;
 		$('#reset').append(next);
 	} else if (currentHand > 21 && playerHand[0].face === "A") {
-		currentHand -= 10;
+		playerHand[0].value = 1;
 	}
 
 	$('#btnDeal').remove();
@@ -158,11 +158,13 @@ function stand() {
 			dealerHand.unshift(deck.pop());
 			dealer += dealerHand[0].value;
 			$('.dealerCards').append("<img id = 'dealt' src = "+dealerHand[0].img+">")
+
 			if (dealer > 21 && dealerHand[0].face === 'A') {
 				dealer -= dealerHand[0].value;
 				dealerHand[0].value = 1;
 				dealer += dealerHand[0].value;
-			} 	
+			} 
+
 			for (let d = 0; d < dealerHand.length; d++) {
 				if (dealer > 21 && dealerHand[d].face === 'A') {
 					dealerHand -= dealerHand[d].value;
@@ -170,6 +172,7 @@ function stand() {
 					dealerHand += dealerHand[d].value;
 				}
 			}
+			
 			if (dealer > 21) {
 				bank = bank + bet;
 				alert(`dealer busted! You win $${bet}`);
